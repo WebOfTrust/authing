@@ -11,7 +11,7 @@ public func auth(msg: UnsafePointer<CChar>) -> Bool {
 
     var res = false
     let sem = DispatchSemaphore(value: 0)
-    context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: String(cString: msg)) { success, error in
+    context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: String(cString: msg)) { success, _ in
         res = success
         sem.signal()
     }

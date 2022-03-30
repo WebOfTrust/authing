@@ -5,10 +5,15 @@ import PackageDescription
 
 let package = Package(
     name: "authing",
+    platforms: [
+        .macOS(.v10_13),
+        .iOS(.v12),
+    ],
     products: [
         .library(
             name: "authing",
-            targets: ["authing"]),
+            targets: ["authing"]
+        ),
     ],
     dependencies: [
     ],
@@ -16,9 +21,11 @@ let package = Package(
         .target(
             name: "authing",
             dependencies: [
-            ]),
+            ]
+        ),
         .testTarget(
             name: "authingTests",
-            dependencies: ["authing"]),
+            dependencies: ["authing"]
+        ),
     ]
 )
