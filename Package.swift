@@ -7,18 +7,18 @@ let package = Package(
     name: "authing",
     products: [
         .library(
-            name: "signing",
-            targets: ["signing"]),
+            name: "authing",
+            targets: ["authing"]),
     ],
     dependencies: [
     ],
     targets: [
         .target(
-            name: "signing",
+            name: "authing",
             dependencies: [
             ]),
         .testTarget(
-            name: "signingTests",
-            dependencies: ["signing"]),
+            name: "authingTests",
+            dependencies: ["authing"]),
     ]
 )
